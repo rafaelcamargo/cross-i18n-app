@@ -1,15 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { HelloWorld } from 'cross-i18n-components';
 import './Home.css';
 
-function App() {
+function HomeView() {
   const { t, i18n } = useTranslation();
   const setLanguage = lng => i18n.changeLanguage(lng);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>{t('home.hello')}</h1>
+    <div className="home">
+      <header className="home-header">
+        <HelloWorld i18n={i18n} />
         <div className="language-selector">
           <label htmlFor="language-select">{t('home.language')}: </label>
           <select
@@ -26,4 +27,4 @@ function App() {
   );
 }
 
-export default App; 
+export default HomeView; 
