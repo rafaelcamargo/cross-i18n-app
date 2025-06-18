@@ -1,0 +1,6 @@
+{
+  "hello": {
+    "world": "Hello World",
+    "greeting": "Welcome to our internationalized component!"
+  }
+} 
