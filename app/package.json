@@ -34,6 +34,9 @@
         "functions": 100,
         "lines": 100
       }
+    },
+    "moduleNameMapper": {
+      "@src\/(.*)$": "<rootDir>/src/$1"
     }
   },
   "browserslist": {

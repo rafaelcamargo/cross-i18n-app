@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { HelloWorld } from 'cross-i18n-components';
 import './Home.css';

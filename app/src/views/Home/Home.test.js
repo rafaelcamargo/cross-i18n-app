@@ -1,5 +1,4 @@
-import React from 'react';
-import { customRender, screen, act } from '../../services/testing';
+import { customRender, screen, act } from '@src/services/testing';
 import Home from './Home';
 
 describe('Home View', () => {

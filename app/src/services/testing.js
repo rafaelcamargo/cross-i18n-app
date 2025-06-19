@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import userEvent from '@testing-library/user-event';
-import i18n from '../i18n';
+import i18n from '@src/i18n';
 
 export * from '@testing-library/react';
 export { userEvent };

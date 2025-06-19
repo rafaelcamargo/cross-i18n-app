@@ -19,7 +19,15 @@
     ]
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime"
+    "@babel/plugin-transform-runtime",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@src": "./src"
+        }
+      }
+    ]
   ],
   "overrides": [
     {
