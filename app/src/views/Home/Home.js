@@ -18,8 +18,8 @@ function HomeView() {
             value={i18n.language}
             onChange={(e) => setLanguage(e.target.value)}
           >
-            <option value="en">{t('home.english')}</option>
-            <option value="pt">{t('home.portuguese')}</option>
+            <option value="en-US">{t('home.english')}</option>
+            <option value="pt-BR">{t('home.portuguese')}</option>
           </select>
         </div>
       </header>

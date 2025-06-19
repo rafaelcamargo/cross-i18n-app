@@ -14,24 +14,24 @@ describe('Home View', () => {
     })
   }
 
-  it('should language be english by default', async () => {
+  it('should language be portuguese by default', async () => {
     await mount();
-    const helloElement = screen.getByText('Hello World');
-    expect(helloElement).toBeInTheDocument();
-  });
-
-  it('should language be optionally portuguese', async () => {
-    const { user } = await mount();
-    await changeLanguage(user, 'pt');
     expect(screen.getByText('Olá Mundo')).toBeInTheDocument();
     expect(screen.getByText('Idioma:')).toBeInTheDocument();
   });
 
-  it('should change language back to english', async () => {
+  it('should language be optionally english', async () => {
     const { user } = await mount();
-    await changeLanguage(user, 'pt');
-    await changeLanguage(user, 'en');
+    await changeLanguage(user, 'en-US');
     expect(screen.getByText('Hello World')).toBeInTheDocument();
     expect(screen.getByText('Language:')).toBeInTheDocument();
+  });
+
+  it('should change language back to portuguese', async () => {
+    const { user } = await mount();
+    await changeLanguage(user, 'en-US');
+    await changeLanguage(user, 'pt-BR');
+    expect(screen.getByText('Olá Mundo')).toBeInTheDocument();
+    expect(screen.getByText('Idioma:')).toBeInTheDocument();
   });
 }); 
